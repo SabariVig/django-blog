@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Post
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 insert = {
@@ -17,6 +18,7 @@ def get_ip(request):
     return ip
 
 
+#@login_required
 def index(request):
     my_dict = {'insert_me': "Welcome TO Blog Page"}
     get_ip(request)
