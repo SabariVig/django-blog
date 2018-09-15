@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+{% load material_form %}
+{% block qp %}
+<h2>You Have Logged Out</h2>
+<br>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+             <a href="{%url 'login'%}">Login Again</a>
+            </small>
+        </div>
+{% endblock  %}
