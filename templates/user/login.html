@@ -3,6 +3,14 @@
 {% block qp %}
 {% include 'material/includes/material_css.html' %}
 {% include 'material/includes/material_js.html' %}
+{%if user.is_authenticated %}
+    <h1>You Have Already Logged In 🙂 </h1>
+
+    <script type="text/javascript">
+            setTimeout(1500);
+            window.location ="/profile"
+
+    </script>{%else%}
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}
@@ -20,4 +28,5 @@
             </small>
         </div>
     </div>
+{%endif%}
 {% endblock  %}
