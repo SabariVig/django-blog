@@ -1,2 +1,4 @@
 django
 pillow
+django-material
+django-crispy-forms
